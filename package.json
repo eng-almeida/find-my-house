@@ -1,0 +1,31 @@
+{
+  "name": "find-my-rent",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test",
+    "dev": "ts-node-dev --respawn --inspect --transpileOnly ./src/index.ts",
+    "prod": "tsc && node ./dist/index.js"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.6.0",
+    "@babel/core": "^7.6.0",
+    "@babel/node": "^7.6.1",
+    "@babel/preset-env": "^7.6.0",
+    "@types/dotenv": "^6.1.1",
+    "@types/validator": "^10.11.3",
+    "nodemon": "^1.19.2"
+  },
+  "dependencies": {
+    "@types/mongoose": "^5.5.17",
+    "@types/node": "^12.7.5",
+    "@types/puppeteer": "^1.19.1",
+    "dotenv": "^8.1.0",
+    "mongoose": "^5.7.0",
+    "puppeteer": "^1.19.0",
+    "ts-node-dev": "^1.0.0-pre.42",
+    "typescript": "^3.6.3",
+    "validator": "^11.1.0"
+  }
+}

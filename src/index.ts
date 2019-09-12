@@ -1,6 +1,7 @@
 import dotenv from 'dotenv';
 import mongoose from 'mongoose';
 import scrapeImovirtual from './scrapers/imovirtual';
+import scrapeIdealista from './scrapers/idealista';
 import { Rental } from './types/rental/rental.model';
 import RentalInterface from './types/rental/rental.interface'
 
@@ -14,15 +15,18 @@ mongoose.connect(`mongodb+srv://${mongoDBUser}:${mongoDBPassword}@cluster0-kksmq
 
 const db  = mongoose.connection;
 const startScrapping = async () => {
-  const imovirtualResults = await scrapeImovirtual();
-    imovirtualResults.map((result: RentalInterface) => {
-    const rental = new Rental(result);
-    rental.save()
-      .then(() => { console.log('Notify User'); })
-      .catch((err: {}) => {
-        console.log(err);
-      });  
-  });
+  // const imovirtualResults = await scrapeImovirtual();
+  //   imovirtualResults.map((result: RentalInterface) => {
+  //   const rental = new Rental(result);
+  //   rental.save()
+  //     .then(() => { console.log('Notify User'); })
+  //     .catch((err: {}) => {
+  //     //  console.log(err);
+  //     });  
+  //   });
+  
+  const idealistaResults = await scrapeIdealista();
+
 }
 
 

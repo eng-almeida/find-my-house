@@ -22,7 +22,7 @@
     "@types/node": "^12.7.5",
     "@types/puppeteer": "^1.19.1",
     "dotenv": "^8.1.0",
-    "mongoose": "^5.7.0",
+    "mongoose": "^5.7.5",
     "puppeteer": "^1.19.0",
     "ts-node-dev": "^1.0.0-pre.42",
     "typescript": "^3.6.3",
